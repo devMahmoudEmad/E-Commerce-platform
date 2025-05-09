@@ -43,12 +43,12 @@ body {
   h2{
     font-size: 20px;
     font-weight: 600;
-    color: blueviolet;
+    color: #346267;
     float: left;
-  }
+  } 
   .user-manag-btn button{
 
-    background-color: blueviolet;
+    background-color:  #346267;
     color: white;
     border: none;
     float: right;
@@ -68,13 +68,13 @@ body {
   }
   
   th {
-    background-color: blueviolet;
+    background-color: #346267;
     color: #fff;
     font-weight: 600;
   }
   
   tr:hover {
-    background-color: #f8f9fa;
+    background-color: #b4c7c0;
   }
   th{
     font-size: 16px;
@@ -111,7 +111,7 @@ body {
   }
   
   button.edit i{
-    color: #3498db;
+    color: #346267;
     font-size: 18px;
   }
 
@@ -122,19 +122,19 @@ body {
   }
   
   button.delete i{
-    color: #fd5d5c;
+    color: #346267;
     font-size: 18px;
   
   }
 
   
   button.approve {
-    background-color: #fd5d5c;
+    background-color: #387177;
     color: white;
   }
   
   button.approve:hover {
-    background-color: #e64444;
+    background-color: #387177;
   }
   
 
@@ -271,7 +271,7 @@ body {
   }
   
   .sidebar-link:hover {
-    background-color: blueviolet;
+    background-color: #387177;
     color: #fff;
   }
   .top-section {
@@ -279,7 +279,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: blueviolet;
+    background-color: #346267;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
     height: 70px;
@@ -345,7 +345,7 @@ body {
     position: absolute;
     top: -5px;
     right: -5px;
-    background-color: #fd5d5c;
+    background-color: #387177;
     color: white;
     padding: 2px 6px;
     border-radius: 50%;
@@ -370,4 +370,6 @@ body {
   }
   
   
-  
+  #userSearchButton{
+    background-color: #387177;
+  }

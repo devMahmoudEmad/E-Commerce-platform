@@ -1,18 +1,13 @@
 body {
     height: 100vh;
-    background: linear-gradient(-45deg, #ff6b6b, #f8e9a1, #4ecdc4, #556270);
+    background: linear-gradient( #b4c7c0);
     background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  @keyframes gradientBG {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-  }
+
   #guest {
     display: inline-block;
     margin-top: 14px;
@@ -56,19 +51,15 @@ body {
   }
   
   .container {
-    background: rgba(255, 255, 255, 0.1);
+    background: #6f918c;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     width: 350px;
     text-align: center;
-    animation: fadeIn 0.5s ease-in-out;
   }
   
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+  
   
   h2 {
     margin-bottom: 1.5rem;
@@ -124,7 +115,7 @@ body {
   button {
     width: 100%;
     padding: 0.8rem;
-    background: linear-gradient(135deg, #3a8dde, #7f56d9);
+    background: linear-gradient(135deg, #077f53, #1d362e);
     color: #fff;
     border: none;
     border-radius: 16px;

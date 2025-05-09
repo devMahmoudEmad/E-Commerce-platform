@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (user) {
         console.log(user.id)
         // localStorage.setItem("currentUserId", user.id); 
-        if (email === "mo2.prog@gmail.com") {
+        if (email === "Magdi@gmail.com") {
           Swal.fire({
             title: "Welcome,Admin!",
             text: "You are being redirected to the admin page.",

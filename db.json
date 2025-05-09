@@ -3,7 +3,7 @@
     {
       "name": "Magdi",
       "email": "Magdi@gmail.com",
-      "password":"123",
+      "password": "123",
       "role": "admin",
       "id": "1"
     },
@@ -147,6 +147,14 @@
       "password": "74108520",
       "role": "user",
       "approved": true
+    },
+    {
+      "id": "25",
+      "name": "emad",
+      "email": "emad@g.com",
+      "password": "74108520",
+      "role": "seller",
+      "approved": true
     }
   ],
   "products": [
@@ -285,39 +293,62 @@
       "date": "5/9/2025, 2:17:17 AM",
       "total": "2200.00",
       "status": "delivered"
+    },
+    {
+      "id": 5,
+      "customerName": "Magdi",
+      "customerEmail": "Magdi@gmail.com",
+      "products": [
+        {
+          "productID": 3,
+          "quantity": 1,
+          "price": "200.00",
+          "sellerId": "2"
+        },
+        {
+          "productID": 2,
+          "quantity": 1,
+          "price": "300.00",
+          "sellerId": "2"
+        }
+      ],
+      "date": "5/9/2025, 6:38:47 PM",
+      "total": "500.00",
+      "status": "Pending"
     }
   ],
   "wishlist": [
     {
       "id": "1",
-      "producID":1,
-      "customerID":"3"
+      "producID": 1,
+      "customerID": "3"
     },
     {
       "id": "2",
-      "producID":2,
-      "customerID":"7"
+      "producID": 2,
+      "customerID": "7"
     }
   ],
   "review": [
     {
       "id": "0",
-      "customerID":"7",
+      "customerID": "7",
       "customerName": "cust",
-      "producID":1,
+      "producID": 1,
       "date": "7/7/2025, 6:34:16 PM",
-      "message":"Great product, Highly recommend it."
+      "message": "Great product, Highly recommend it."
     },
     {
       "reviewID": "1",
-      "customerID":"3",
+      "customerID": "3",
       "customerName": "customer",
-      "producID":1,
+      "producID": 1,
       "date": "6/4/2025, 8:15:16 PM",
-      "message":"Awesome!!"
+      "message": "Awesome!!",
+      "id": "6b93"
     },
     {
-      "id": 5,
+      "id": "5",
       "customerName": "Mahmoud Emad",
       "customerEmail": "mahmoudemad7521@gmail.com",
       "products": [
