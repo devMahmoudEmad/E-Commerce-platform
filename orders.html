@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orders</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/cart.css">
+
+
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+        <a href="#"><img class="mainlogo" src="/images/logoo.png" alt="Logo"/></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" data-url="index.html">Home</a></li>
+      <li><a href="orders.html">Orders</a></li>
+      <li>
+        <a href="html/wishlist.html">
+          <i class="fas fa-heart"></i>
+          <span id="wishlist-counter" class="wishlist-counter"></span>
+        </a>
+      </li>
+      <li>
+        <a href="cart.html">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-counter" class="cart-counter">0</span> 
+        </a>
+      </li>
+      <li><a href="account.html" data-url="account.html"><i class="fas fa-user"></i></a></li>
+  
+
+    </ul>
+    <div class="auth-buttons">
+      <a href="login.html" class="btn-login" id="logout"><i class="fas fa-sign-in-alt"></i>Logout</a>
+
+    </div>
+  </nav>
+
+
+<!-- Orders Page Content -->
+<main id="content" class="orders-page">
+  <h1>Orders</h1>
+  <table class="orders-table">
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Date</th>
+        <th>Customer Name</th>
+        <th>Products</th>
+        <th>Total</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody class="orders-list">
+      <!-- Orders will be dynamically inserted here -->
+    </tbody>
+  </table>
+</main>
+<script type="module" src="/js/cart.js"></script>
+
+  <script type="module" src="/js/orders.js"></script>
+  <script>
+    document.getElementById("logout").addEventListener("click", () => {
+        
+      Swal.fire({
+        title: "Logged Out",
+        text: "You have been logged out successfully!",
+        icon: "success",
+        confirmButtonText: "OK",
+      })
+      .then(() => {
+        
+        window.location.href = "login.html";
+      });
+    });
+  </script>
+  
+</body>
+</html>

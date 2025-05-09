@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/cart.css">
+  <link rel="stylesheet" href="/css/nav.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#"><img class="mainlogo" src="/images/logoo.png" alt="Logo"/></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="porducts.html">Products</a></li>
+      <li><a href="orders.html">Orders</a></li>
+      <li>
+        <a href="wishlist.html">
+          <i class="fas fa-heart"></i>
+          <span id="wishlist-counter" class="wishlist-counter"></span> 
+        </a>
+      </li>
+      <li>
+        <a href="cart.html">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-counter" class="cart-counter">0</span> 
+        </a>
+      </li>
+      <li><a href="account.html"><i class="fas fa-user"></i></a></li>
+    </ul>
+    <div class="auth-buttons">
+      <a href="login.html" class="btn-login" id="logout"><i class="fas fa-sign-in-alt"></i>Logout</a>
+    </div>
+  </nav>
+
+  <!-- Cart Page Content -->
+  <main class="cart-page">
+    <h1>Your Cart</h1>
+    <div class="cart-header">
+      <span>You have <span id="cart-item-count">0</span> items in your cart</span>
+    </div>
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody class="cart-items">
+        <!-- Cart items will be dynamically inserted here -->
+      </tbody>
+    </table>
+    <div class="cart-summary">
+      <h3>Total: $<span id="cart-total">0.00</span></h3>
+      <button class="checkout-btn" onclick="openCheckoutModal()">Proceed to Checkout</button>
+    </div>
+  </main>
+
+  <!-- Checkout Modal -->
+  <div id="checkout-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCheckoutModal()">&times;</span>
+      <h2>Confirm Purchase</h2>
+      <p>Are you sure you want to proceed with the purchase?</p>
+      <button class="confirm-btn" onclick="confirmPurchase()">Confirm</button>
+      <button class="cancel-btn" onclick="closeCheckoutModal()">Cancel</button>
+    </div>
+  </div>
+
+  <!-- SweetAlert JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+  <script src="/js/cart.js"></script>
+
+  <script>
+    document.getElementById("logout").addEventListener("click", () => {
+      Swal.fire({
+        title: "Logged Out",
+        text: "You have been logged out successfully!",
+        icon: "success",
+        confirmButtonText: "OK",
+      }).then(() => {
+        window.location.href = "login.html";
+      });
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/wishlist.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <style>
+
+main {
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+table img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #fd5d5c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff3b3b;
+}
+  </style>
+</head>
+<body class="light-mode">
+ 
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#"><img class="mainlogo" src="/images/logoo.png" alt="Logo"/></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#products">Products</a></li>
+      <li><a href="orders.html">Orders</a></li>
+      <li>
+        <a href="wishlist.html">
+          <i class="fas fa-heart"></i>
+          <span id="wishlist-counter" class="wishlist-counter">0</span>
+        </a>
+      </li>
+      <li>
+        <a href="cart.html">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-counter" class="cart-counter">0</span> 
+        </a>
+      </li>
+      <li><a href="account.html"><i class="fas fa-user"></i></a></li>
+    </ul>
+    <div class="auth-buttons">
+      <!-- <a href="login.html" class="btn-login"><i class="fas fa-sign-in-alt"></i> Login</a> -->
+    </div>
+  </nav>
+
+  <!-- Wishlist Content -->
+  <main id="content">
+    <h1>Your Wishlist</h1>
+    <table class="wishlist-items">
+      <!-- Wishlist items will be dynamically inserted here -->
+    </table>
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- About Section -->
+      <div class="footer-section about">
+        <h3>About Us</h3>
+        <p>We are a passionate team committed to delivering<br> high-quality products and outstanding customer service. Our mission is to bring value, trust, and innovation to every experience.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#products">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="account.html">Account</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-map-marker-alt"></i> 300 E-commerce Street, BlinkBuy</p>
+        <p><i class="fas fa-phone-alt"></i> +300 400 500</p>
+        <p><i class="fas fa-envelope"></i> BlinkBuy@ecommerce.com</p>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="footer-section social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 MohamedShop. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="/js/cart.js"></script>
+  <script type="module" src="/js/wishlist.js"></script>
+</body>
+</html>

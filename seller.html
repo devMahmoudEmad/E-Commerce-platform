@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Dashboard</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/main.css">
+<style>
+
+.product-item strong:nth-of-type(4) {
+  display: none; 
+}
+
+/* Hide all sections by default */
+.content-section-seller{
+  display: none;
+}
+
+/* Show the User Management section by default */
+#user-management {
+  display: block;
+}
+/* Show the active section */
+.content-section.active {
+  display: block;
+}
+
+main {
+    padding: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+
+</style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-logo">
+      <img style="width: 140px;" src="/images/logoo.png" alt=""/>
+    </div>
+    <ul class="sidebar-nav">
+      <li class="sidebar-item">
+        <a href="#product-management" class="sidebar-link">
+          <i class="ri-shopping-bag-line"></i>
+          <span>Product Management</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="#order-management" class="sidebar-link">
+          <i class="ri-list-check-2"></i>
+          <span>Order Management</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="top-section">
+        <div class="left">
+          <h1>Welcome back, Seller!</h1>
+        </div>
+    
+        <div class="right">
+          <div class="profile">
+            <img src="/images/avatars/seller.jpg" alt="" />
+            <span>Hema</span>
+            <a class="btn-login" id="logout"><i class="fas fa-sign-in-alt"></i>Logout</a>
+
+          </div>
+        </div>
+      </div>
+      <main>
+
+  <main>
+    <!-- Product Management Section -->
+    <section id="product-management" class="section-content-seller">
+      <div class="user-manag-btn">
+        <h2>Product Management</h2>
+        <button id="addProductButton">Add New Product</button>
+      </div>
+
+
+      <div class="section-search-bar">
+        <input type="text" id="productSearchInput" placeholder="Search products..." />
+        <button id="productSearchButton"><i class="ri-search-line"></i></button>
+      </div>
+      <table id="product-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Approved</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Products will be dynamically added here -->
+        </tbody>
+      </table>
+    </section>
+
+      <!-- Order Management Section -->
+      <section id="order-management" class="section-content-seller"> 
+        <h2>Order Management</h2><br> <br><br><hr>
+        <div class="section-search-bar">
+          <input type="text" id="orderSearchInput" placeholder="Search orders..." />
+          <button id="orderSearchButton"><i class="ri-search-line"></i></button>
+        </div>
+        <table id="order-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>customer name</th>
+              <th>products</th>
+              <th>date</th>
+              <th>total price</th>
+              <th>status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Orders will be dynamically added here -->
+          </tbody>
+        </table>
+      </section>
+<!-- Modal Form for Adding/Editing Product -->
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modalTitle">Add New Product</h2> <br> <br><br>
+    <form id="productForm">
+      <label for="productName" >Name:</label>
+      <input type="text" id="productName" name="name" required />
+
+      <label for="productPrice">Price:</label>
+      <input type="number" id="productPrice" name="price" required />
+
+      <label for="productCategory">Category:</label>
+      <input type="text" id="productCategory" name="category" required />
+
+      <label for="productImages">Images:</label>
+      <input type="text" id="productImages" name="images" multiple />
+      <label for="productColor">Product Color:</label>
+      <input type="text" id="productColor" /> 
+
+      <button type="submit">Save</button>
+    </form>
+  </div>
+</div>
+
+      <!-- Modal for Editing Order -->
+      <div id="editOrderModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Edit Order</h2><br> <br><br>
+          <form id="editOrderForm">
+            <label for="editOrderStatus">Status:</label>
+            <select id="editOrderStatus" name="status" required>
+              <option value="pending">Pending</option>
+              <option value="shipped">Shipped</option>
+              <option value="delivered">Delivered</option>
+              <option value="cancelled">Cancelled</option>
+            </select>
+            <button type="submit">Update Order</button>
+          </form>
+        </div>
+      </div>
+  </main>
+  <script type="module" src="/js/seller.js"></script>
+
+
+
+<!-- Include SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  document.getElementById("logout").addEventListener("click", () => {
+    Swal.fire({
+      title: "Logged Out",
+      text: "You have been logged out successfully!",
+      icon: "success",
+      confirmButtonText: "OK",
+    }).then(() => {
+      // Redirect to login page after user clicks "OK"
+      window.location.href = "login.html";
+    });
+  });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <style>
+        .navbar {
+            padding: 3px 20px;
+        }
+        #search-input{
+            width: 240px;
+        }
+        .nav-links {
+            gap: 40px;
+        }
+  
+
+ 
+.divbody{
+    background: linear-gradient(#111, #222);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center; /*X-Axis*/
+    align-items: center; /*Y-Axis*/
+    position: relative;
+}
+.divbody::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: red;
+    clip-path: circle(40% at right 60%); /*to make the red circle on the right side*/
+    z-index: 0; /*to put the red circle behind the container*/
+}
+.containercontent{
+    height: 80%;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.1); /*white with 10% opacity,تعمل شكل زجاجي*/
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.main-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-content .text{
+    width: 40%;
+    color: #fff;
+   margin-top: -100px;
+}
+.main-content .text h2{
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.main-content .text p{
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+
+    letter-spacing: 1px;
+}
+.main-content .image{
+    width: 40%;
+    position: relative;
+    z-index: 1;
+}
+
+.main-content .image img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+    </style>
+</head>
+<div id="chatbot-container">
+    <button id="chatbot-toggle" onclick="toggleChat()">الدردشة</button>
+    <div id="chatbox-wrapper" style="display: none;">
+      <div id="chatbox"></div>
+      <input type="text" id="userInput" placeholder="اكتب سؤالك...">
+      <button onclick="sendMessage()">إرسال</button>
+    </div>
+  </div>
+<body >
+
+  <nav class="navbar">
+    <div class="logo">
+        <a href="#"><img class="mainlogo" src="/images/logoo.png" alt="Logo"/></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" data-url="index.html">Home</a></li>
+      <li><a href="porducts.html">Rate a Product</a></li>
+      <li>
+        <form class="search-form" action="#" method="get">
+            <input type="text" id="search-input" placeholder="Search by name, price, or category..." name="search">
+            <button type="submit" id="search-button"><i class="fas fa-search"></i></button>
+        </form>
+      </li>
+      <li><a href="orders.html" data-url="orders.html">My Orders</a></li>
+      <li>
+        <a href="wishlist.html">
+          <i class="fas fa-heart"></i>
+          <span id="wishlist-counter" class="wishlist-counter"></span>
+        </a>
+      </li>
+      <li>
+        <a href="cart.html">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-counter" class="cart-counter">0</span> 
+        </a>
+      </li>
+      <li><a href="account.html" data-url="account.html"><i class="fas fa-user"></i></a></li>
+
+    </ul>
+    <div class="auth-buttons">
+        <a href="login.html" class="btn-login" id="logout"><i class="fas fa-sign-in-alt"></i>Logout</a>
+    </div>
+  </nav>
+    <main id="content">
+  <div class="divbody">
+    <div class="containercontent">
+  <div class="main-content">
+    <div class="text">
+        <h2>BlinkBuy, <br>Running Shoes</h2>
+    <p>See it. Want it. Blink and it's yours.
+      Fast finds, flash deals, and a smooth shopping ride.
+      </p>
+    </div>
+<div class="image">
+    <img src="/images/shoes.png" alt="" > 
+</div>
+</div>
+</div>
+</div>
+<br><br><br>
+
+        <div id="products" class="most-popular-products">
+            <!-- Product cards will be dynamically inserted here -->
+          </div>
+
+    </main>
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>We are a passionate team committed to delivering<br> high-quality products and outstanding customer service. Our mission is to bring value, trust, and innovation to every experience.</p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="orders.html">Orders</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Section -->
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 300 E-commerce Street, BlinkBuy</p>
+                <p><i class="fas fa-phone-alt"></i> +300 400 500</p>
+                <p><i class="fas fa-envelope"></i> BlinkBuy@ecommerce.com</p>
+            </div>
+    
+            <!-- Social Media Links -->
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 BlinkBuy Shop.All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
+    <script src="/js/auth.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/wishlist.js"></script>
+   
+    <script src="/js/productListing.js"></script>
+    <script src="/js/main.js"></script>
+
+    <script>
+        document.getElementById("logout").addEventListener("click", () => {
+            
+          Swal.fire({
+            title: "Logged Out",
+            text: "You have been logged out successfully!",
+            icon: "success",
+            confirmButtonText: "OK",
+          })
+          .then(() => {
+            
+            window.location.href = "login.html";
+          });
+        });
+      </script>
+      
+
+</body>
+</html>
+

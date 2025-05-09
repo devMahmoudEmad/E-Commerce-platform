@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <style>
+    .error {
+       color: red;
+       font-size: 0.9em;
+       display: none;
+     }
+     </style>
+</head>
+<body>
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="sidebar-logo">
+    <img style="width: 140px;" src="/images/logoo.png" alt="" />
+  </div>
+  <ul class="sidebar-nav">
+    <li class="sidebar-item">
+      <a href="#user-management" class="sidebar-link">
+        <i class="ri-user-line"></i>
+        <span>User Management</span>
+      </a>
+    </li>
+    <li class="sidebar-item">
+      <a href="#product-management" class="sidebar-link">
+        <i class="ri-shopping-bag-line"></i>
+        <span>Product Management</span>
+      </a>
+    </li>
+    <li class="sidebar-item">
+      <a href="#order-management" class="sidebar-link">
+        <i class="ri-list-check-2"></i>
+        <span>Order Management</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="top-section">
+      <div class="left">
+        <h1 style="text-align: center;">Welcome back, Admin!</h1>
+      </div>
+  
+      <div class="right">
+        <div class="profile">
+          <img src="/images/avatars/admin.jpg" alt="Admin Avatar" />
+          <span>Mohamed Ahmed</span>
+          <a href="login.html" class="btn-login" id="logout"><i class="fas fa-sign-in-alt"></i>Logout</a>
+
+        </div>
+      </div>
+    </div>
+    <main>
+
+<!-- Modal for adding a new user -->
+<div id="addUserModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="CloseModal">&times;</span> 
+    <h2>Add New User</h2><br> <br><br>
+    <form id="addUserForm">
+      <label for="userName">Name:</label>
+      <input type="text" placeholder="Name" id="userName" name="userName" required>
+      <span id="usernameError" class="error">Username should be valid</span>
+
+      <label for="userEmail">Email:</label>
+      <input type="email" id="userEmail" placeholder="Email" name="userEmail" required>
+      <span id="userEmailError" class="error">User email should be valid</span>
+      <input type="password" id="userPassword" placeholder="Password" required>
+      <span id="userPassError" class="error">Password not valid</span>
+      <input type="password" id="userPasswordConfirm" placeholder="Confirm Password" required>
+      <span id="userPasswordConfirmError" class="error">Confirm password not valid</span>
+      <label for="userRole">Role:</label>
+      <select id="userRole" name="userRole" required>
+        <option value="" disabled selected>Select Role</option>
+        <option value="user">Customer</option>
+        <option value="seller">Seller</option>
+        <option value="admin">Admin</option>
+      </select>
+      
+      <button type="submit">Add User</button>
+    </form>
+  </div>
+</div>
+      <!-- User Management Section -->
+      <section id="user-management" class="content-section">
+        <div class="user-manag-btn">
+          <h2>User Management</h2>
+          <button id="addUserButton">Add New User</button>
+        </div>
+        <div class="section-search-bar">
+          <input type="text" id="userSearchInput" placeholder="Search users..." />
+          <button id="userSearchButton"><i class="ri-search-line"></i></button>
+        </div>
+
+
+        <table id="user-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Approved</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Users will be dynamically added here -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Product Management Section -->
+      <section id="product-management"  class="content-section">
+        <h2>Product Management</h2>
+        <div class="section-search-bar">
+          <input type="text" id="productSearchInput" placeholder="Search products..." />
+          <button id="productSearchButton"><i class="ri-search-line"></i></button>
+        </div>
+        <table id="product-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Images</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Seller ID</th>
+              <th>Approved</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Products will be dynamically added here -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Order Management Section -->
+      <section id="order-management"  class="content-section">
+        <h2>Order Management</h2>
+        <div class="section-search-bar">
+          <input type="text" id="orderSearchInput" placeholder="Search orders..." />
+          <button  id="orderSearchButton"><i class="ri-search-line"></i></button>
+        </div>
+        <table id="order-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>customer name</th>
+              <th>products</th>
+              <th>date</th>
+              <th>total price</th>
+              <th>status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Orders will be dynamically added here -->
+          </tbody>
+        </table>
+      </section>
+      <!-- Modal Form for Editing User -->
+      <div id="editUserModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Edit User</h2><br> <br><br>
+          <form id="editUserForm">
+            <label for="editUserName">Name:</label>
+            <input type="text" id="editUserName" name="name" required />
+
+            <label for="editUserEmail">Email:</label>
+            <input type="email" id="editUserEmail" name="email" required />
+            <label for="editUserRole">Role:</label>
+            <select id="editUserRole" name="role" required>
+              <option value="admin">Admin</option>
+              <option value="customer">Customer</option>
+              <option value="seller">Seller</option>
+            </select>
+
+            <button type="submit">Save Changes</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modal for Editing Order -->
+<div id="editOrderModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Edit Order</h2><br> <br><br>  
+    <form id="editOrderForm">
+      <label for="editOrderStatus">Status:</label>
+      <select id="editOrderStatus" name="status" required>
+        <option value="pending">Pending</option>
+        <option value="shipped">Shipped</option>
+        <option value="delivered">Delivered</option>
+        <option value="cancelled">Cancelled</option>
+      </select>
+      <button type="submit">Update Order</button>
+    </form>
+  </div>
+</div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
+<script>
+const closeModalBtn = document.getElementById("CloseModal");
+const addUserModal = document.getElementById("addUserModal");
+closeModalBtn.addEventListener("click", () => {
+  addUserModal.style.display = "none";
+});
+</script>
+
+
+  <script type="module"  src="/js/admin.js"></script>
+  <script>
+    document.getElementById("logout").addEventListener("click", () => {
+      Swal.fire({
+        title: "Logged Out",
+        text: "You have been logged out successfully!",
+        icon: "success",
+        confirmButtonText: "OK",
+      }).then(() => {
+     
+        window.location.href = "login.html";
+      });
+    });
+  </script>
+  
+</body>
+</html>

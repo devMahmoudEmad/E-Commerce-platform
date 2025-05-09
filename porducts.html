@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Additional CSS for Reviews */
+        #content {
+            padding-top: 60px;
+            text-align: center;
+        }
+        #review-section {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        #review-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #review-text, #product-name {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        #review-text {
+            height: 100px;
+        }
+
+        #review-rating {
+            width: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #review-form button {
+            padding: 10px 20px;
+            background-color: #fd5d5c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #review-form button:hover {
+            background-color: #fd5d5c;
+        }
+
+        #reviews-container {
+            margin-top: 20px;
+        }
+
+        .review-item {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            background-color: white;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .review-item:last-child {
+            border-bottom: none;
+        }
+
+        .review-rating {
+            color: #ffc107;
+            font-size: 18px;
+        }
+
+        .review-text, .review-product {
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .review-date {
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#"><img class="mainlogo" src="/images/logoo.png" alt="Logo"/></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-url="index.html">Home</a></li>
+            <li><a href="orders.html" data-url="orders.html">Orders</a></li>
+            <li>
+                <a href="wishlist.html">
+                    <i class="fas fa-heart"></i>
+                    <span id="wishlist-counter" class="wishlist-counter"></span>
+                </a>
+            </li>
+            <li>
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-counter" class="cart-counter"></span>
+                </a>
+            </li>
+            <li><a href="account.html" data-url="account.html"><i class="fas fa-user"></i></a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn-login"><i class="fas fa-sign-in-alt"></i> Logout</a>
+        </div>
+    </nav>
+
+    <main id="content">
+        <div id="review-section" data-product-id="4"> 
+            <h3>Leave a Review</h3>
+            <form id="review-form">
+                <input type="text" id="product-name" placeholder="Enter Product Name" required /> 
+                <textarea id="review-text" placeholder="Write your review" required></textarea>
+                <input type="number" id="review-rating" placeholder="Rating (1-5)" min="1" max="5" required />
+                <button type="submit">Submit Review</button>
+            </form>
+            <div id="reviews-container"></div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const reviewForm = document.getElementById("review-form");
+            const reviewsContainer = document.getElementById("reviews-container");
+            const reviewSection = document.getElementById("review-section");
+            const productId = reviewSection.getAttribute("data-product-id"); // Get the product ID
+
+            // Load reviews for the current product
+            const loadReviews = () => {
+                const reviews = JSON.parse(localStorage.getItem(`reviews_${productId}`)) || [];
+                reviewsContainer.innerHTML = reviews
+                    .map(
+                        (review) => `
+                        <div class="review-item">
+                            <div class="review-rating">
+                                ${"★".repeat(review.rating)}${"☆".repeat(5 - review.rating)}
+                            </div>
+                            <div class="review-product">Product: ${review.productName}</div>
+                            <div class="review-text">${review.text}</div>
+                            <div class="review-date">${new Date(review.date).toLocaleString()}</div>
+                        </div>
+                    `
+                    )
+                    .join("");
+            };
+
+            // Save review for the current product
+            reviewForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                const reviewText = document.getElementById("review-text").value;
+                const reviewRating = document.getElementById("review-rating").value;
+                const productName = document.getElementById("product-name").value;
+
+                if (reviewText && reviewRating && productName) {
+                    const review = {
+                        text: reviewText,
+                        rating: parseInt(reviewRating),
+                        date: new Date().toISOString(),
+                        productName: productName, // Include product name in the review
+                    };
+
+                    const reviews = JSON.parse(localStorage.getItem(`reviews_${productId}`)) || [];
+                    reviews.push(review);
+                    localStorage.setItem(`reviews_${productId}`, JSON.stringify(reviews));
+
+                    // Clear form
+                    reviewForm.reset();
+
+                    // Reload reviews
+                    loadReviews();
+                }
+            });
+
+            // Initial load of reviews
+            loadReviews();
+        });
+    </script>
+</body>
+</html>

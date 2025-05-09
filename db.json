@@ -1,0 +1,293 @@
+{
+  "users": [
+    {
+      "name": "Mohamed Ahmed",
+      "email": "mo2.prog@gmail.com",
+      "role": "admin",
+      "id": "1",
+      "password": "Mohamed1234#"
+    },
+    {
+      "id": "2",
+      "name": "seller",
+      "email": "seller@gmail.com",
+      "password": "1234512345",
+      "role": "seller",
+      "approved": true
+    },
+    {
+      "name": "customer",
+      "email": "customer@gmail.com",
+      "role": "customer",
+      "id": "3"
+    },
+    {
+      "id": "5",
+      "name": "seller23",
+      "email": "asd@gmail.com",
+      "role": "seller",
+      "approved": true
+    },
+    {
+      "id": "6",
+      "name": "sell",
+      "email": "seller3@gmail.com",
+      "role": "seller",
+      "approved": true
+    },
+    {
+      "name": "cust",
+      "email": "cust@gmail.com",
+      "password": "12341234",
+      "id": "7"
+    },
+    {
+      "id": "8",
+      "name": "ess",
+      "email": "selle111r@gmail.com",
+      "role": "seller",
+      "approved": true
+    },
+    {
+      "id": "9",
+      "name": "seeee",
+      "email": "seller222@gmail.com",
+      "password": "123123123",
+      "role": "seller",
+      "approved": true
+    },
+    {
+      "id": "10",
+      "name": "sellllllllerew1c",
+      "email": "sellllllllerew@gmail.com",
+      "role": "seller",
+      "approved": true
+    },
+    {
+      "id": "11",
+      "name": "sellllllllerew",
+      "email": "sellllllllerew222@gmail.com",
+      "role": "seller",
+      "approved": true
+    },
+    {
+      "id": "12",
+      "name": "seller12",
+      "email": "sellllllllerew1231@gmail.com",
+      "role": "seller",
+      "approved": true
+    },
+    {
+      "id": "13",
+      "name": "sellerq",
+      "email": "sellerqq@gmail.com",
+      "role": "seller",
+      "approved": true
+    },
+    {
+      "name": "momwomd",
+      "email": "mo@gmail.com",
+      "role": "customer",
+      "id": "14"
+    },
+    {
+      "id": "15",
+      "name": "hash",
+      "email": "Hash@gmail.com",
+      "hashedPassword": "b415b310b77f856e6c2209b904fb84f287281a460f7e6bfbe600750f1b366483",
+      "role": "customer",
+      "order_ids": [],
+      "address": ""
+    },
+    {
+      "id": "16",
+      "name": "hashhh1",
+      "email": "hash112@gmail.com",
+      "hashedPassword": "b415b310b77f856e6c2209b904fb84f287281a460f7e6bfbe600750f1b366483",
+      "role": "customer",
+      "order_ids": [],
+      "address": ""
+    },
+    {
+      "id": "17",
+      "name": "Mohamedhash",
+      "email": "mohash@gmail.com",
+      "hashedPassword": "343ead88311e7f0f241193a7933f1d8adbdaf11328f16447a553cf86fe3c0b42",
+      "role": "customer",
+      "order_ids": [],
+      "address": ""
+    },
+    {
+      "id": "18",
+      "name": "mosahash",
+      "email": "mosahash@gmai.com",
+      "password": "12341234",
+      "role": "customer",
+      "approved": true
+    },
+    {
+      "id": "20",
+      "name": "seelleer12",
+      "email": "selller12@gmail.com",
+      "password": "seller1234",
+      "role": "seller",
+      "approved": true
+    },
+    {
+      "id": "21",
+      "name": "customer11",
+      "email": "asd@gmail.com",
+      "password": "12341234",
+      "role": "seller",
+      "approved": true
+    },
+    {
+      "id": "22",
+      "name": "mahmoud",
+      "email": "mahmoud@gmail.com",
+      "password": "74108520",
+      "role": "user",
+      "approved": true
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Shoes",
+      "price": "$121.00",
+      "category": "Shoes",
+      "sellerId": "2",
+      "approved": true,
+      "images": [
+        {
+          "url": "/images/products/shoes.png",
+          "color": "black"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Iphone",
+      "price": "$300.00",
+      "category": "Phone",
+      "sellerId": "2",
+      "approved": true,
+      "images": [
+        {
+          "url": "/images/products/iphone.jpg",
+          "color": "black"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "realme6",
+      "price": "$200.00",
+      "category": "mobile",
+      "sellerId": "2",
+      "approved": true,
+      "images": [
+        {
+          "url": "/images/products/phone.jpg",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Adidas",
+      "price": "$150.00",
+      "category": "Shoes",
+      "sellerId": "2",
+      "approved": true,
+      "images": [
+        {
+          "url": "/images/products/black_shoes.jpg",
+          "color": "black"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Nike",
+      "price": "$166.00",
+      "category": "Shoes",
+      "sellerId": "2",
+      "approved": true,
+      "images": [
+        {
+          "url": "/images/products/white_blackShoes.jpg",
+          "color": "black"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Hp ",
+      "price": "$1000.00",
+      "category": "Labtop",
+      "sellerId": "2",
+      "approved": true,
+      "images": [
+        {
+          "url": "/images/products/labtop.jpg",
+          "color": "black"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Dell",
+      "price": "$1200.00",
+      "category": "Labtop",
+      "sellerId": "2",
+      "approved": true,
+      "images": [
+        {
+          "url": "/images/products/lap.jpg",
+          "color": "white"
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": "3",
+      "customerName": "cust",
+      "customerEmail": "cust@gmail.com",
+      "products": [
+        {
+          "productID": 7,
+          "quantity": 1,
+          "price": "1200.00",
+          "sellerId": "2"
+        }
+      ],
+      "date": "5/8/2025, 7:56:16 PM",
+      "total": "1200.00",
+      "status": "Pending"
+    },
+    {
+      "id": 4,
+      "customerName": "mahmoud",
+      "customerEmail": "mahmoud@gmail.com",
+      "products": [
+        {
+          "productID": 7,
+          "quantity": 1,
+          "price": "1200.00",
+          "sellerId": "2"
+        },
+        {
+          "productID": 6,
+          "quantity": 1,
+          "price": "1000.00",
+          "sellerId": "2"
+        }
+      ],
+      "date": "5/9/2025, 2:17:17 AM",
+      "total": "2200.00",
+      "status": "Pending"
+    }
+  ]
+}

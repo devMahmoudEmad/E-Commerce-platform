@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account</title>
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/account.css">
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#"><img class="mainlogo" src="/images/logoo.png" alt="Logo"/></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html" data-url="/front/index.html">Home</a></li>
+          <li><a href="products.html">My Products</a></li>
+          <li><a href="orders.html" data-url="/front/html/orders.html">My Orders</a></li>
+          <li>
+            <a href="wishlist.html">
+              <i class="fas fa-heart"></i>
+              <span id="wishlist-counter" class="wishlist-counter"></span> 
+            </a>
+          </li>
+          <li>
+            <a href="cart.html">
+              <i class="fas fa-shopping-cart"></i>
+              <span id="cart-counter" class="cart-counter">0</span>
+            </a>
+          </li>
+          <li><a href="account.html" data-url="/html/account.html"><i class="fas fa-user"></i></a></li>
+    
+        </ul>
+        <div class="auth-buttons">
+            <a class="btn-login" id="logout"><i class="fas fa-sign-in-alt"></i>Logout</a>
+        </div>
+      </nav>
+
+  <main class="account-container">
+    <h1>My Account</h1>
+    <div class="profile-section">
+      <h2>Profile Details</h2>
+      <div class="profile-info">
+        <p><strong>Name:</strong> <span id="profile-name">Mo Ahmed</span></p>
+        <p><strong>Email:</strong> <span id="profile-email">Mo@gmail.com</span></p>
+        <p><strong>Role:</strong> <span id="profile-role">Customer</span></p>
+      </div>
+    </div>
+
+    <div class="update-section">
+      <h2>Update Profile</h2>
+      <form id="update-profile-form">
+        <div class="form-group">
+          <label for="update-name">Name:</label>
+          <input type="text" id="update-name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="update-email">Email:</label>
+          <input type="email" id="update-email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="update-password">New Password:</label>
+          <input type="password" id="update-password" name="password">
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password">
+        </div>
+        <button type="submit" class="btn-update">Update Profile</button>
+      </form>
+    </div>
+  </main>
+
+  <script type="module" src="/js/account.js"></script>
+  <script>
+    document.getElementById("logout").addEventListener("click", () => {
+      Swal.fire({
+        title: "Logged Out",
+        text: "You have been logged out successfully!",
+        icon: "success",
+        confirmButtonText: "OK",
+      }).then(() => {
+        window.location.href = "login.html";
+      });
+    });
+  </script>
+  
+</body>
+</html>
