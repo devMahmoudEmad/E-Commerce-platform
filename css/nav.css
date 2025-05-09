@@ -59,9 +59,10 @@ body{
     font-weight: 600;
     border-radius: 30px;
     text-decoration: none;
-    background: transparent;
-    border: 2px solid #fd5d5c;
-    color: black;
+    background-color: #fd5d5c;
+    /* border: 2px solid #fd5d5c; */
+    color: white;
+    text-shadow: 1px 1px 1px #333;
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -70,7 +71,7 @@ body{
     display: inline-block;
   }
   
-  .btn-login::before {
+  /* .btn-login::before {
     content: '';
     position: absolute;
     width: 120%;
@@ -81,16 +82,17 @@ body{
     z-index: 0;
     transition: all 0.4s ease;
     transform: skewX(-10deg);
-  }
+  } */
   
   .btn-login:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 24px rgba(253, 93, 92, 0.4);
+    /* transform: translateY(-3px); */
+    background-color: #da4d4d;
+    /* box-shadow: -2px 4px 4px rgba(253, 93, 92, 0.4); */
   }
   
-  .btn-login:hover::before {
+  /* .btn-login:hover::before {
     left: 0;
-  }
+  } */
   
   .btn-login span {
     position: relative;
