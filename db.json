@@ -128,6 +128,22 @@
     {
       "name": "mahmoud",
       "email": "mahmoud@gmail.com",
+      "role": "admin",
+      "id": "22"
+    },
+    {
+      "id": "23",
+      "name": "Mahmoud Emad",
+      "email": "mahmoudemad7521@gmail.com",
+      "password": "74108520",
+      "role": "customer",
+      "order_ids": [],
+      "address": ""
+    },
+    {
+      "id": "24",
+      "name": "ali",
+      "email": "ali@g.com",
       "password": "74108520",
       "role": "user",
       "approved": true
@@ -268,6 +284,59 @@
       ],
       "date": "5/9/2025, 2:17:17 AM",
       "total": "2200.00",
+      "status": "delivered"
+    }
+  ],
+  "wishlist": [
+    {
+      "id": "1",
+      "producID":1,
+      "customerID":"3"
+    },
+    {
+      "id": "2",
+      "producID":2,
+      "customerID":"7"
+    }
+  ],
+  "review": [
+    {
+      "id": "0",
+      "customerID":"7",
+      "customerName": "cust",
+      "producID":1,
+      "date": "7/7/2025, 6:34:16 PM",
+      "message":"Great product, Highly recommend it."
+    },
+    {
+      "reviewID": "1",
+      "customerID":"3",
+      "customerName": "customer",
+      "producID":1,
+      "date": "6/4/2025, 8:15:16 PM",
+      "message":"Awesome!!"
+    },
+    {
+      "id": 5,
+      "customerName": "Mahmoud Emad",
+      "customerEmail": "mahmoudemad7521@gmail.com",
+      "products": [
+        {
+          "productID": 3,
+          "quantity": 1,
+          "price": "200.00",
+          "sellerId": "2"
+        },
+        {
+          "productID": 4,
+          "quantity": 1,
+          "price": "150.00",
+          "sellerId": "2"
+        }
+      ],
+      "address": "",
+      "date": "5/9/2025, 5:29:46 PM",
+      "total": "350.00",
       "status": "Pending"
     }
   ]
