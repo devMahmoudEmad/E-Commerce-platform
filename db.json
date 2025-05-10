@@ -97,7 +97,7 @@
       "id": "4",
       "name": "Head phone",
       "price": "$150.00",
-      "category": "Shoes",
+      "category": "electronics",
       "sellerId": "2",
       "approved": true,
       "images": [
@@ -149,7 +149,7 @@
       "id": "8",
       "name": "Controler",
       "price": "$1200.00",
-      "category": "Labtop",
+      "category": "electronics",
       "sellerId": "2",
       "approved": true,
       "images": [
@@ -201,7 +201,7 @@
       "id": "12",
       "name": "Play Station",
       "price": "$1200.00",
-      "category": "Labtop",
+      "category": "electronics",
       "sellerId": "2",
       "approved": true,
       "images": [
@@ -214,7 +214,7 @@
       "id": "9",
       "name": "basis headphone",
       "price": "$1200.00",
-      "category": "Labtop",
+      "category": "electronics",
       "sellerId": "2",
       "approved": true,
       "images": [
