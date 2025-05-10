@@ -11,7 +11,7 @@ body{
     color: #333;
     box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
-    background-color: #fff;
+    background-color: #6a8e7c;
     z-index: 50;
   }
   
@@ -22,7 +22,7 @@ body{
     width: 100%;
   }
   .cart-counter {
-    background-color: #fd5d5c; 
+    background-color: #122a2c; 
     color: white;
     border-radius: 50%; 
     padding: 2px 6px; 
@@ -45,7 +45,7 @@ body{
   }
   
   .nav-links li a:hover {
-    color: #fd5d5c;
+    color: #abe3c4;
   }
 
   .auth-buttons {
@@ -59,7 +59,7 @@ body{
     font-weight: 600;
     border-radius: 30px;
     text-decoration: none;
-    background-color: #fd5d5c;
+    background-color: #122a2c;
     /* border: 2px solid #fd5d5c; */
     color: white;
     text-shadow: 1px 1px 1px #333;
@@ -86,7 +86,7 @@ body{
   
   .btn-login:hover {
     /* transform: translateY(-3px); */
-    background-color: #da4d4d;
+    background-color: #577564;
     /* box-shadow: -2px 4px 4px rgba(253, 93, 92, 0.4); */
   }
   
@@ -130,7 +130,7 @@ body{
 }
 
 #search-button {
-  background-color: #fd5d5c;
+  background-color: #122a2c;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -142,5 +142,5 @@ body{
 }
 
 #search-button:hover {
-    background-color: #0056b3;
+    background-color: #577564;
 }

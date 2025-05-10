@@ -154,7 +154,7 @@ section {
 [data-tooltip]::before {
 	content: attr(data-tooltip);
 	position: absolute;
-	background-color: rgba(199,15,22,1);
+	background-color: #122a2c;
 	padding: 5px 10px;
 	right: calc(100% + 5px);
 	border-radius: 5px;
