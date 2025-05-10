@@ -51,7 +51,4 @@ contact us @ [mahmoudemad7521@gmail.com] & [mahmoud.h.mosaad@gmail.com].
 
 ![myphoto](./screenshoots/Screenshot_10-5-2025_205531_127.0.0.1.jpeg)
 ![myphoto](./screenshoots/Screenshot_10-5-2025_205518_127.0.0.1.jpeg)
-![myphoto](./screenshoots/Screenshot_10-5-2025_21021_127.0.0.1.jpeg)
-![myphoto](./screenshoots/Screenshot_10-5-2025_205327_127.0.0.1.jpeg)
-![myphoto](./screenshoots/Screenshot_10-5-2025_205434_127.0.0.1.jpeg)
 ![myphoto](./screenshoots/Screenshot_10-5-2025_205451_127.0.0.1.jpeg)
