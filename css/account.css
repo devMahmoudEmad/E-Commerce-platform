@@ -1,3 +1,6 @@
+body{
+    background:linear-gradient(#b2a7a7, #979292,#b2a7a7,#fff);
+}
 .navbar{
     position: relative;
 }
@@ -54,7 +57,7 @@
   }
   
   .btn-update {
-    background-color: #fd5d5c;
+    background-color: #124125;
     color: white;
     padding: 10px 20px;
     border: none;

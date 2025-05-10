@@ -160,14 +160,14 @@
   "products": [
     {
       "id": "1",
-      "name": "Shoes",
+      "name": "Tablet",
       "price": "$121.00",
-      "category": "Shoes",
+      "category": "Phone",
       "sellerId": "2",
       "approved": true,
       "images": [
         {
-          "url": "/images/products/shoes.png"
+          "url": "/images/products/premium-tablet.webp"
         }
       ]
     },
@@ -199,27 +199,27 @@
     },
     {
       "id": "4",
-      "name": "Adidas",
+      "name": "Head phone",
       "price": "$150.00",
       "category": "Shoes",
       "sellerId": "2",
       "approved": true,
       "images": [
         {
-          "url": "/images/products/black_shoes.jpg"
+          "url": "/images/products/sony-headphones.webp"
         }
       ]
     },
     {
       "id": "5",
-      "name": "Nike",
+      "name": "Rog",
       "price": "$166.00",
-      "category": "Shoes",
+      "category": "Labtop",
       "sellerId": "2",
       "approved": true,
       "images": [
         {
-          "url": "/images/products/white_blackShoes.jpg"
+          "url": "/images/products/Laptop-Rog.jpg"
         }
       ]
     },
@@ -246,6 +246,84 @@
       "images": [
         {
           "url": "/images/products/lap.jpg"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Controler",
+      "price": "$1200.00",
+      "category": "Labtop",
+      "sellerId": "2",
+      "approved": true,
+      "images": [
+        {
+          "url": "/images/products/nintendo-switch-controller-pair-joy-con-blue-yellow-hac-a-japaa.webp"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Dell",
+      "price": "$1200.00",
+      "category": "Labtop",
+      "sellerId": "2",
+      "approved": true,
+      "images": [
+        {
+          "url": "/images/products/Nintendo-controller.webp"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Dell",
+      "price": "$1200.00",
+      "category": "Labtop",
+      "sellerId": "2",
+      "approved": true,
+      "images": [
+        {
+          "url": "/images/products/lap.jpg"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Samsung",
+      "price": "$1200.00",
+      "category": "Phone",
+      "sellerId": "2",
+      "approved": true,
+      "images": [
+        {
+          "url": "/images/products/samsung-galaxy-s21-1.webp"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Play Station",
+      "price": "$1200.00",
+      "category": "Labtop",
+      "sellerId": "2",
+      "approved": true,
+      "images": [
+        {
+          "url": "/images/products/playstation-5-horizontal-product-shot-01-ps5-en-23nov20-scaled.webp"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "basis headphone",
+      "price": "$1200.00",
+      "category": "Labtop",
+      "sellerId": "2",
+      "approved": true,
+      "images": [
+        {
+          "url": "/images/products/sennheiser-headphones.webp"
         }
       ]
     }

@@ -80,3 +80,6 @@
     z-index: 1;
     border-radius: 20px;
 }
+body{
+    background:linear-gradient(#b2a7a7, #979292,#b2a7a7,#fff);
+}
