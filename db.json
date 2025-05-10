@@ -167,8 +167,7 @@
       "approved": true,
       "images": [
         {
-          "url": "/images/products/shoes.png",
-          "color": "black"
+          "url": "/images/products/shoes.png"
         }
       ]
     },
@@ -181,8 +180,7 @@
       "approved": true,
       "images": [
         {
-          "url": "/images/products/iphone.jpg",
-          "color": "black"
+          "url": "/images/products/iphone.jpg"
         }
       ]
     },
@@ -195,8 +193,7 @@
       "approved": true,
       "images": [
         {
-          "url": "/images/products/phone.jpg",
-          "color": "blue"
+          "url": "/images/products/phone.jpg"
         }
       ]
     },
@@ -209,8 +206,7 @@
       "approved": true,
       "images": [
         {
-          "url": "/images/products/black_shoes.jpg",
-          "color": "black"
+          "url": "/images/products/black_shoes.jpg"
         }
       ]
     },
@@ -223,8 +219,7 @@
       "approved": true,
       "images": [
         {
-          "url": "/images/products/white_blackShoes.jpg",
-          "color": "black"
+          "url": "/images/products/white_blackShoes.jpg"
         }
       ]
     },
@@ -237,8 +232,7 @@
       "approved": true,
       "images": [
         {
-          "url": "/images/products/labtop.jpg",
-          "color": "black"
+          "url": "/images/products/labtop.jpg"
         }
       ]
     },
@@ -251,8 +245,7 @@
       "approved": true,
       "images": [
         {
-          "url": "/images/products/lap.jpg",
-          "color": "white"
+          "url": "/images/products/lap.jpg"
         }
       ]
     }

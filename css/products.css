@@ -55,7 +55,7 @@ section {
 }
 
 .product-card__container:hover img {
-	transform: scale(1.3);
+	opacity: .5;
 }
 
 .product-card__btn {
@@ -76,19 +76,6 @@ section {
 	transition: all 0.3s ease, top 0.3s ease 0.2s;
 }
 
-.product-card:hover .product-card__btn {
-	right: 1rem;
-	opacity: 1;
-}
-
-.product-card:hover .product-card__btn.cart {
-	top: calc(1rem + 50px);
-}
-
-.product-card__btn:hover {
-    background: linear-gradient(45deg, rgba(246,41,12,1) 0%, rgba(246,41,12,1) 7%, rgba(240,47,23,1) 8%, rgba(199,15,22,1) 83%, rgba(199,15,22,1) 100%);
-	color: #e5e5e5;
-}
 
 .product-card__description {
 	padding: 0.5rem 1rem;
@@ -113,10 +100,7 @@ section {
 }
 
 .product-card__color {
-	display: flex;
-	column-gap: 0.5rem;
-	padding: 0.5rem 1rem;
-	justify-content: center;
+	display: none;
 }
 
 .product-card__btn-radio {
