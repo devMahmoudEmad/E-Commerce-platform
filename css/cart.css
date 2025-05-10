@@ -205,7 +205,7 @@ body {
   h1 {
     text-align: center;
     font-size: 2.5rem;
-    color: #fd5d5c;
+    color: #6a8e7c;
     margin-bottom: 30px;
   }
   
@@ -220,8 +220,8 @@ body {
   }
   
   .orders-table thead {
-    background-color: burlywood;
-    color: #fff;
+    background-color: #6a8e7c;
+    color: whitesmoke;
   }
   
   .orders-table th,

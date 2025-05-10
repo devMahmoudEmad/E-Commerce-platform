@@ -17,6 +17,7 @@ section {
 }
 
 .most-popular-products {
+	background-color: whitesmoke;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -90,7 +91,7 @@ section {
     font-weight: bold;
 }
 .product-card__price{
-	color: green;
+	color: #6a8e7c;
 	font-size: larger;
 }
 .product-card__category{

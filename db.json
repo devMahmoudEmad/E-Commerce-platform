@@ -22,117 +22,13 @@
       "id": "3"
     },
     {
-      "id": "5",
-      "name": "seller23",
-      "email": "asd@gmail.com",
-      "role": "seller",
-      "approved": true
-    },
-    {
-      "id": "6",
-      "name": "sell",
-      "email": "seller3@gmail.com",
-      "role": "seller",
-      "approved": true
-    },
-    {
-      "name": "cust",
-      "email": "cust@gmail.com",
-      "password": "12341234",
-      "id": "7"
-    },
-    {
-      "id": "8",
-      "name": "ess",
-      "email": "selle111r@gmail.com",
-      "role": "seller",
-      "approved": true
-    },
-    {
-      "id": "9",
-      "name": "seeee",
-      "email": "seller222@gmail.com",
-      "password": "123123123",
-      "role": "seller",
-      "approved": true
-    },
-    {
-      "id": "11",
-      "name": "sellllllllerew",
-      "email": "sellllllllerew222@gmail.com",
-      "role": "seller",
-      "approved": true
-    },
-    {
-      "id": "12",
-      "name": "seller12",
-      "email": "sellllllllerew1231@gmail.com",
-      "role": "seller",
-      "approved": true
-    },
-    {
-      "id": "13",
-      "name": "sellerq",
-      "email": "sellerqq@gmail.com",
-      "role": "seller",
-      "approved": true
-    },
-    {
-      "name": "momwomd",
-      "email": "mo@gmail.com",
-      "role": "customer",
-      "id": "14"
-    },
-    {
-      "id": "16",
-      "name": "hashhh1",
-      "email": "hash112@gmail.com",
-      "hashedPassword": "b415b310b77f856e6c2209b904fb84f287281a460f7e6bfbe600750f1b366483",
-      "role": "customer",
-      "order_ids": [],
-      "address": ""
-    },
-    {
-      "id": "17",
-      "name": "Mohamedhash",
-      "email": "mohash@gmail.com",
-      "hashedPassword": "343ead88311e7f0f241193a7933f1d8adbdaf11328f16447a553cf86fe3c0b42",
-      "role": "customer",
-      "order_ids": [],
-      "address": ""
-    },
-    {
-      "id": "18",
-      "name": "mosahash",
-      "email": "mosahash@gmai.com",
-      "password": "12341234",
-      "role": "customer",
-      "approved": true
-    },
-    {
-      "id": "20",
-      "name": "seelleer12",
-      "email": "selller12@gmail.com",
-      "password": "seller1234",
-      "role": "seller",
-      "approved": true
-    },
-    {
-      "id": "21",
-      "name": "customer11",
-      "email": "asd@gmail.com",
-      "password": "12341234",
-      "role": "seller",
-      "approved": true
-    },
-    {
       "name": "mahmoud",
       "email": "mahmoud@gmail.com",
       "role": "admin",
-      "id": "22"
+      "id": "4"
     },
     {
-      "id": "23",
+      "id": "5",
       "name": "Mahmoud Emad",
       "email": "mahmoudemad7521@gmail.com",
       "password": "74108520",
@@ -141,7 +37,7 @@
       "address": ""
     },
     {
-      "id": "24",
+      "id": "6",
       "name": "ali",
       "email": "ali@g.com",
       "password": "74108520",
@@ -149,7 +45,7 @@
       "approved": true
     },
     {
-      "id": "25",
+      "id": "7",
       "name": "emad",
       "email": "emad@g.com",
       "password": "74108520",

@@ -49,8 +49,8 @@
   border-radius: 30px;
   border: none;
   color: #fff;
-  background: linear-gradient(135deg, #ff416c, #ff4b2b);
-  box-shadow: 0 4px 15px rgba(255, 75, 43, 0.4);
+  background: linear-gradient(135deg, #6a8e7c, #a5dbc0);
+  box-shadow: 0 4px 15px #6a8e7c(255, 75, 43, 0.4);
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -60,6 +60,7 @@
 }
 .btn-login:hover{
   border: 1px solid #fff;
+  opacity: .5;
  
 }
 body{
