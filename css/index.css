@@ -31,12 +31,14 @@
 .containercontent{
     height: 80%;
     width: 80%;
-    background: rgba(255, 255, 255, 0.1); /*white with 10% opacity,تعمل شكل زجاجي*/
     border-radius: 20px;
     position: relative;
     z-index: 1;
 }
 
+#content{
+    background-color: whitesmoke;
+}
 .main-content{
     display: flex;
     justify-content: space-between;

@@ -1,9 +1,9 @@
 body{
     background:linear-gradient(#b2a7a7, #979292,#b2a7a7,#fff);
 }
-.navbar{
+/* .navbar{
     position: relative;
-}
+} */
   /* Account Container */
 .account-container {
     max-width: 500px;
