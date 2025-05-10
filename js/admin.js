@@ -335,6 +335,19 @@ async handleOrderSearch() {
       })
       .join("");
   }
+  paginate(data, page = 1, itemsPerPage = 5) {
+  const totalPages = Math.ceil(data.length / itemsPerPage);
+  const start = (page - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  return {
+    data: data.slice(start, end),
+    currentPage: page,
+    totalPages,
+    hasPrev: page > 1,
+    hasNext: page < totalPages,
+  };
+}
+  // Format products for display in the orders table
   formatProducts(products) {
     if (!products || !Array.isArray(products)) return "No products";
 
