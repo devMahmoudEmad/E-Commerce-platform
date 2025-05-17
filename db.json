@@ -264,6 +264,29 @@
       "date": "5/9/2025, 6:38:47 PM",
       "total": "500.00",
       "status": "cancelled"
+    },
+    {
+      "id": 6,
+      "customerName": "Mahmoud Emad",
+      "customerEmail": "mahmoudemad7521@gmail.com",
+      "products": [
+        {
+          "productID": 2,
+          "quantity": 1,
+          "price": "300.00",
+          "sellerId": "2"
+        },
+        {
+          "productID": 3,
+          "quantity": 1,
+          "price": "200.00",
+          "sellerId": "2"
+        }
+      ],
+      "address": "",
+      "date": "17/05/2025, 09:42:54",
+      "total": "500.00",
+      "status": "Pending"
     }
   ],
   "wishlist": [
