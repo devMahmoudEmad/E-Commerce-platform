@@ -226,21 +226,6 @@
   ],
   "orders": [
     {
-      "id": "3",
-      "customerName": "cust",
-      "products": [
-        {
-          "productID": 7,
-          "quantity": 1,
-          "price": "1200.00",
-          "sellerId": "2"
-        }
-      ],
-      "date": "5/8/2025, 7:56:16 PM",
-      "total": "1200.00",
-      "status": "delivered"
-    },
-    {
       "id": "4",
       "customerName": "mahmoud",
       "products": [
@@ -262,7 +247,7 @@
       "status": "delivered"
     },
     {
-      "id": 5,
+      "id": "5",
       "customerName": "Magdi",
       "customerEmail": "Magdi@gmail.com",
       "products": [
