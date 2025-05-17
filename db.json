@@ -22,12 +22,6 @@
       "id": "3"
     },
     {
-      "name": "mahmoud",
-      "email": "mahmoud@gmail.com",
-      "role": "admin",
-      "id": "4"
-    },
-    {
       "id": "5",
       "name": "Mahmoud Emad",
       "email": "mahmoudemad7521@gmail.com",
@@ -46,6 +40,23 @@
       "id": "7",
       "name": "emad",
       "email": "emad@g.com",
+      "password": "74108520",
+      "role": "seller",
+      "approved": true
+    },
+    {
+      "id": "8",
+      "name": "cust",
+      "email": "cust@g.com",
+      "password": "74108520",
+      "role": "customer",
+      "order_ids": [],
+      "address": ""
+    },
+    {
+      "id": "9",
+      "name": "emad",
+      "email": "emad@m.com",
       "password": "74108520",
       "role": "seller",
       "approved": true
@@ -220,6 +231,34 @@
           "url": "/images/products/sennheiser-headphones.webp"
         }
       ]
+    },
+    {
+      "id": "13",
+      "name": "oppo",
+      "price": "$500.00",
+      "category": "phones",
+      "sellerId": "2",
+      "approved": true,
+      "images": [
+        {
+          "url": "/images/products/iphone.jpg",
+          "color": "white"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "oppo reno f",
+      "price": "$500.00",
+      "category": "phones",
+      "sellerId": "9",
+      "approved": true,
+      "images": [
+        {
+          "url": "/images/products/iphone.jpg",
+          "color": "black"
+        }
+      ]
     }
   ],
   "orders": [
@@ -242,7 +281,7 @@
       ],
       "date": "5/9/2025, 2:17:17 AM",
       "total": "2200.00",
-      "status": "delivered"
+      "status": "pending"
     },
     {
       "id": "5",
@@ -263,7 +302,7 @@
       ],
       "date": "5/9/2025, 6:38:47 PM",
       "total": "500.00",
-      "status": "cancelled"
+      "status": "pending"
     },
     {
       "id": 6,
@@ -285,6 +324,92 @@
       ],
       "address": "",
       "date": "17/05/2025, 09:42:54",
+      "total": "500.00",
+      "status": "Pending"
+    },
+    {
+      "id": 7,
+      "customerName": "cust",
+      "customerEmail": "cust@g.com",
+      "products": [
+        {
+          "productID": 4,
+          "quantity": 1,
+          "price": "150.00",
+          "sellerId": "2"
+        },
+        {
+          "productID": 5,
+          "quantity": 1,
+          "price": "166.00",
+          "sellerId": "2"
+        }
+      ],
+      "address": "",
+      "date": "5/17/2025, 10:34:41 AM",
+      "total": "316.00",
+      "status": "Pending"
+    },
+    {
+      "id": 8,
+      "customerName": "cust",
+      "customerEmail": "cust@g.com",
+      "products": [
+        {
+          "productID": 3,
+          "quantity": 1,
+          "price": "200.00",
+          "sellerId": "2"
+        }
+      ],
+      "address": "",
+      "date": "5/17/2025, 10:43:30 AM",
+      "total": "200.00",
+      "status": "Pending"
+    },
+    {
+      "id": 9,
+      "customerName": "Mahmoud Emad",
+      "customerEmail": "mahmoudemad7521@gmail.com",
+      "products": [
+        {
+          "productID": 4,
+          "quantity": 1,
+          "price": "150.00",
+          "sellerId": "2"
+        },
+        {
+          "productID": 3,
+          "quantity": 1,
+          "price": "200.00",
+          "sellerId": "2"
+        },
+        {
+          "productID": 2,
+          "quantity": 1,
+          "price": "300.00",
+          "sellerId": "2"
+        }
+      ],
+      "address": "",
+      "date": "5/17/2025, 11:48:07 AM",
+      "total": "650.00",
+      "status": "Pending"
+    },
+    {
+      "id": 10,
+      "customerName": "Mahmoud Emad",
+      "customerEmail": "mahmoudemad7521@gmail.com",
+      "products": [
+        {
+          "productID": 16,
+          "quantity": 1,
+          "price": "500.00",
+          "sellerId": "9"
+        }
+      ],
+      "address": "",
+      "date": "5/17/2025, 11:48:33 AM",
       "total": "500.00",
       "status": "Pending"
     }

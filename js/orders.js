@@ -1,5 +1,5 @@
-import { Product } from './models/Product.js';
-import { Order } from './models/Order.js';
+import { Product } from "./models/Product.js";
+import { Order } from "./models/Order.js";
 
 async function getMaxOrderId() {
   try {
@@ -9,7 +9,7 @@ async function getMaxOrderId() {
 
     if (orders.length === 0) return 1; // If no orders exist, start with ID 1
 
-    const maxId = Math.max(...orders.map(order => order.id));
+    const maxId = Math.max(...orders.map((order) => order.id));
     return string(maxId + 1); // Increment the maximum ID by 1
   } catch (error) {
     console.error("Error fetching orders:", error);
@@ -40,30 +40,41 @@ async function createOrder(newOrder) {
 }
 
 async function fetchUserData(userId) {
-  try {
-    const response = await fetch(`http://localhost:3000/users/${userId}`);
-    if (!response.ok) throw new Error("Failed to fetch user data.");
-    return await response.json();
-  } catch (error) {
-    console.error("Error fetching user data:", error);
-    throw error;
-  }
+  const response = await fetch(`http://localhost:3000/users/${userId}`);
+  if (!response.ok) throw new Error("Failed to fetch user data.");
+  return await response.json();
 }
-// Function to fetch and display orders
-async function displayOrders() {
-  console.log("Fetching orders...");
-  const ordersList = document.querySelector(".orders-list");
 
+// Function to fetch and display orders for the logged-in user only
+async function displayOrders() {
+  const ordersList = document.querySelector(".orders-list");
   try {
+    // 1. Get current user ID from localStorage
+    const userId = localStorage.getItem("currentCustomerId");
+    if (!userId) {
+      ordersList.innerHTML = `<tr><td colspan="7" style="text-align: center;">Please log in to view your orders.</td></tr>`;
+      return;
+    }
+    // 2. Fetch user data
+    const user = await fetchUserData(userId);
+
+    // 3. Fetch all orders
     const response = await fetch("http://localhost:3000/orders");
-    console.log("Response:", response);
     if (!response.ok) throw new Error("Failed to fetch orders.");
     const orders = await response.json();
-    console.log("Orders:", orders);
+
+    // 4. Filter orders for this user (by email or name)
+    const userOrders = orders.filter(
+      (order) =>
+        (order.customerEmail &&
+          user.email &&
+          order.customerEmail === user.email) ||
+        (order.customerName && user.name && order.customerName === user.name)
+    );
 
     ordersList.innerHTML = "";
 
-    if (orders.length === 0) {
+    if (userOrders.length === 0) {
       ordersList.innerHTML = `
         <tr>
           <td colspan="7" style="text-align: center;">No orders found.</td>
@@ -72,8 +83,7 @@ async function displayOrders() {
       return;
     }
 
-    for (const order of orders) {
-      console.log("Processing order:", order);
+    for (const order of userOrders) {
       const total = parseFloat(order.total).toFixed(2);
       const products = await Promise.all(
         order.products.map(async (product) => {
@@ -81,9 +91,6 @@ async function displayOrders() {
           return `${productData.name} (Qty: ${product.quantity}, Price: $${product.price})`;
         })
       );
-
-      const productImage = order.products[0].image; 
-
       ordersList.innerHTML += `
         <tr class="order-item" data-order-id="${order.id}">
           <td>${order.id}</td>
@@ -91,7 +98,9 @@ async function displayOrders() {
           <td>${order.customerName}</td>
           <td>${products.join(", ")}</td>
           <td>$${total}</td>
-          <td><span class="status ${order.status.toLowerCase()}">${order.status}</span></td>
+          <td><span class="status ${order.status.toLowerCase()}">${
+        order.status
+      }</span></td>
         </tr>
       `;
     }
@@ -108,44 +117,41 @@ async function displayOrders() {
 // Load orders on page load
 window.addEventListener("load", displayOrders);
 
+document
+  .querySelector("#order-form")
+  .addEventListener("submit", async (event) => {
+    event.preventDefault();
 
+    // Fetch user data (replace 'userId' with the actual user ID)
+    // const userId = "1"; // Replace with dynamic user ID if needed
+    const userId = localStorage.getItem("currentCustomerId");
+    console.log(userId);
+    const userData = await fetchUserData(userId);
 
-document.querySelector("#order-form").addEventListener("submit", async (event) => {
-  event.preventDefault();
+    // Create the new order object
+    const newOrder = {
+      id: await getMaxOrderId(), // Generate a unique ID
+      customerName: userData.name, // Use the user's name
+      customerEmail: userData.email, // Include the user's email
+      products: [
+        {
+          productID: "35", // Replace with dynamic product ID if needed
+          quantity: 3, // Replace with dynamic quantity if needed
+          price: 100, // Replace with dynamic price if needed
+          sellerId: localStorage.getItem("currentUserId"), // Replace with dynamic seller ID if needed
+        },
+      ],
+      address: document.querySelector("#address").value,
+      date: new Date().toLocaleString(),
+      total: parseFloat(document.querySelector("#total").value).toFixed(2),
+      status: document.querySelector("#status").value,
+    };
 
-  // Fetch user data (replace 'userId' with the actual user ID)
-  // const userId = "1"; // Replace with dynamic user ID if needed
-  const userId = localStorage.getItem("currentCustomerId");
-  console.log(userId);
-  const userData = await fetchUserData(userId);
+    await createOrder(newOrder);
 
-  // Create the new order object
-  const newOrder = {
-    id: await getMaxOrderId(), // Generate a unique ID
-    customerName: userData.name, // Use the user's name
-    customerEmail: userData.email, // Include the user's email
-    products: [
-      {
-        productID: "35", // Replace with dynamic product ID if needed
-        quantity: 3, // Replace with dynamic quantity if needed
-        price: 100, // Replace with dynamic price if needed
-        sellerId: localStorage.getItem("currentUserId"), // Replace with dynamic seller ID if needed
-      },
-    ],
-    address: document.querySelector("#address").value,
-    date: new Date().toLocaleString(),
-    total: parseFloat(document.querySelector("#total").value).toFixed(2),
-    status: document.querySelector("#status").value,
-  };
-
-  await createOrder(newOrder);
-  
-
-  // Clear the form after submission
-  event.target.reset();
-});
-
-
+    // Clear the form after submission
+    event.target.reset();
+  });
 
 // Load orders on page load
 window.addEventListener("load", displayOrders);
