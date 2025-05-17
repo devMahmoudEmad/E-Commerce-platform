@@ -37,12 +37,10 @@
       "address": ""
     },
     {
-      "id": "6",
       "name": "ali",
       "email": "ali@g.com",
-      "password": "74108520",
-      "role": "user",
-      "approved": true
+      "role": "customer",
+      "id": "6"
     },
     {
       "id": "7",
@@ -238,7 +236,7 @@
       ],
       "date": "5/8/2025, 7:56:16 PM",
       "total": "1200.00",
-      "status": "delivered"
+      "status": "shipped"
     },
     {
       "id": "4",
@@ -262,9 +260,8 @@
       "status": "delivered"
     },
     {
-      "id": 5,
+      "id": "5",
       "customerName": "Magdi",
-      "customerEmail": "Magdi@gmail.com",
       "products": [
         {
           "productID": 3,
@@ -281,7 +278,7 @@
       ],
       "date": "5/9/2025, 6:38:47 PM",
       "total": "500.00",
-      "status": "Pending"
+      "status": "cancelled"
     }
   ],
   "wishlist": [
